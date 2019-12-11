@@ -170,6 +170,9 @@ class LinReg:
         for i in x:
             y1 = i * (self.window_slopes[windownum][tick]) + self.window_intercept[windownum][tick]
             y.append(y1)
+        title_temp = [tick, 'vs. S&P 500 for Window', str(windownum)]
+        title = ' '.join(title_temp)
+        plt.title(title)
         plt.plot(x, y, c='red')
 
 
